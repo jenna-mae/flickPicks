@@ -8,6 +8,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+import HeroBanner from '../components/HeroBanner';
+import PickGenre from '../components/PickGenre';
+
 const MainScreen = props => {
   const navigation = props.navigation;
   const ListData = [
@@ -26,7 +29,10 @@ const MainScreen = props => {
   );
 
   return (
-    <SafeAreaView>
+    // eslint-disable-next-line react-native/no-inline-styles
+    <SafeAreaView style={{backgroundColor: '#1E032B'}}>
+      <HeroBanner />
+      <PickGenre />
       <Text>Top Kids Picks:</Text>
       <Button
         title="searchResults"
