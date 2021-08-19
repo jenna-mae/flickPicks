@@ -10,6 +10,9 @@ import {
 
 import HeroBanner from '../components/HeroBanner';
 import PickGenre from '../components/PickGenre';
+import ListItem from '../components/ListItem';
+import PosterImage from '../components/PosterImage';
+import MovieTitle from '../components/MovieTitle';
 
 const MainScreen = props => {
   const navigation = props.navigation;
@@ -19,13 +22,12 @@ const MainScreen = props => {
     {title: 'Croods3', key: 'Details3', page: 'Details'},
   ];
 
-  const ListItem = ({item}) => (
-    <TouchableOpacity
-      onPress={() => navigation.navigate(item.page, {name: item.key})}>
-      <Image source={require('../imgs/poster.png')} />
-      <Text>{item.title}</Text>
+  const MainList = ({item}) => (
+    <ListItem onPress={() => navigation.navigate(item.page, {name: item.key})}>
+      <PosterImage source={require('../imgs/poster.png')} />
+      <MovieTitle>{item.title}</MovieTitle>
       <Text>X X X X X</Text>
-    </TouchableOpacity>
+    </ListItem>
   );
 
   return (
@@ -41,7 +43,12 @@ const MainScreen = props => {
         }>
         Search Results
       </Button>
-      <FlatList data={ListData} renderItem={ListItem} />
+      <FlatList
+        data={ListData}
+        renderItem={MainList}
+        numColumns={3}
+        keyExtractor={(item, index) => index}
+      />
     </SafeAreaView>
   );
 };

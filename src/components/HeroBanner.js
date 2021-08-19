@@ -10,23 +10,28 @@ const HeroImage = styled.Image`
 const HeroContainer = styled.View`
   position: relative;
   width: 100%;
-  height: 25%;
+  height: 20%;
 `;
 
 const Title = styled.Text`
+  padding: 14px 18px;
+`;
+
+const TextContainer = styled.View`
+  border-radius: 20px;
   position: absolute;
   top: 20px;
   left: 20px;
   background-color: white;
   z-index: 40;
-  padding: 14px;
-  border-radius: 500px;
 `;
 
 function HeroBanner() {
   return (
     <HeroContainer>
-      <Title>The Croods: A New Age</Title>
+      <TextContainer>
+        <Title>The Croods: A New Age</Title>
+      </TextContainer>
       <HeroImage source={require('../imgs/poster.png')} />
     </HeroContainer>
   );
