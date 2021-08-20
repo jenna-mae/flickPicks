@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 const MovieTitle = styled.Text`
   color: white;
-  font-size: 20px;
-  width: 80%;
-  margin: 0 auto;
+  font-size: 18px;
+  padding-top: 8px;
+  font-weight: bold;
 `;
 
 export default MovieTitle;
