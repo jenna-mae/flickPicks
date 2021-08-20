@@ -1,10 +1,15 @@
 import * as React from 'react';
-import {SafeAreaView, Text, Image} from 'react-native';
+import {SafeAreaView, Text} from 'react-native';
+
+import DetailPosterImage from '../components/DetailPosterImage';
+import DetailHeaderText from '../components/DetailHeaderText';
+
 const Details = ({navigation}) => {
   return (
-    <SafeAreaView>
-      <Image source={require('../imgs/poster.png')} />
-      <Text>The Croods: A New Age (2020)</Text>
+    // eslint-disable-next-line react-native/no-inline-styles
+    <SafeAreaView style={{backgroundColor: '#1E032B'}}>
+      <DetailPosterImage source={require('../imgs/poster.png')} />
+      <DetailHeaderText>The Croods: A New Age (2020)</DetailHeaderText>
       <Text>
         Rated G • 2020-11-25(CA) • Animation, Family, Adventure, Fantasy, Comedy
         • 1h 35m
