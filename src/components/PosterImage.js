@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const PosterImage = styled.Image`
-  width: 80%;
-  height: 180px;
+  width: 100%;
+  height: 160px;
   margin: 0 auto;
 `;
 
