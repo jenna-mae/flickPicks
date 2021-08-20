@@ -6,6 +6,7 @@ import {
   Image,
   Button,
   TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 
 import MainList from '../components/MainList';
@@ -38,17 +39,19 @@ const MainScreen = props => {
   return (
     // eslint-disable-next-line react-native/no-inline-styles
     <SafeAreaView style={{backgroundColor: '#1E032B'}}>
-      <HeroBanner />
-      <PickGenre />
-      <Button
-        title="searchResults"
-        onPress={() =>
-          navigation.navigate('SearchResults', {name: 'SearchResults'})
-        }>
-        Search Results
-      </Button>
-      <HomeTitle>Top Kids Picks:</HomeTitle>
-      <MainList data={ListData} renderItem={MainScreenList} numColumns={3} />
+      <ScrollView>
+        <HeroBanner />
+        <PickGenre />
+        <Button
+          title="searchResults"
+          onPress={() =>
+            navigation.navigate('SearchResults', {name: 'SearchResults'})
+          }>
+          Search Results
+        </Button>
+        <HomeTitle>Top Kids Picks:</HomeTitle>
+        <MainList data={ListData} renderItem={MainScreenList} numColumns={3} />
+      </ScrollView>
     </SafeAreaView>
   );
 };
