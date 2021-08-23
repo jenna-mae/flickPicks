@@ -6,11 +6,11 @@ FlickPicks is an application that shows movie details and ratings.
 
 ## Wireframes
 
-<img src="src/imgs/wireframes.jpg">
+<img src="src/imgs/wireframes.png">
 
 ## Mockups
 
-<img src="src/imgs/mockups.jpg">
+<img src="src/imgs/mockups.png">
 
 ## Technologies Used
 
