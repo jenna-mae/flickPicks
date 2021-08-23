@@ -6,7 +6,7 @@ FlickPicks is an application that connects to The Movie DB through an API key. T
 
 ## Wireframes
 
-<img src="src/imgs/wireframes.png">
+<img src="src/imgs/wireframes.png" width="500">
 
 ## Mockups
 
