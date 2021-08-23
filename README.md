@@ -30,6 +30,17 @@ Once you've completed the steps in your terminal, you'll need to wait until the 
 
 React Native
 
+#### Packages Installed
+
+* styled-components
+* react-native-select-dropdown
+* react-navigation/native 
+* react-navigation/stack
+* react-native-gesture-handler
+* react-native-reanimated 
+* react-native-safe-area-context 
+* react-native-screens
+
 ### API's Used
 
 The Movie DB API Key
