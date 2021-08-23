@@ -1,18 +1,18 @@
 # FlickPicks
 
-## Description
+### Description
 
 FlickPicks is an application that connects to The Movie DB through an API key. The application allows users to sort through different genre's to be able to see the top movies currently in each genre. Users can also search for specific movies and once located can click on the poster to see all the details about that specific movie.
 
-## Wireframes
+### Wireframes
 
 <img src="src/imgs/wireframes.png" width="500">
 
-## Mockups
+### Mockups
 
-<img src="src/imgs/mockups.png">
+<img src="src/imgs/mockups.png" width="500">
 
-## Installation
+### Installation
 
 Make sure to locate the folder in the command line. Once there, follow the instructions below to get the app started:
 
@@ -26,15 +26,15 @@ npm run ios
 
 Once you've completed the steps in your terminal, you'll need to wait until the app has been fully built in the xcode simulator. Once it has been built it should be good to go!
 
-## Technologies Used
+### Technologies Used
 
 React Native
 
-## API's Used
+### API's Used
 
 The Movie DB API Key
 
-## Contributers Used
+### Contributers
 
 [Amy Karpiak](https://github.com/amykarpiak)
 [Jenna Emerman](https://github.com/jenna-mae)
