@@ -22,6 +22,6 @@ We used the Movie DB API Key.
 
 ## Contributers Used
 
-[Amy Karpiak] (https://github.com/amykarpiak)
-[Jenna Emerman] (https://github.com/jenna-mae)
+[Amy Karpiak](https://github.com/amykarpiak)
+[Jenna Emerman](https://github.com/jenna-mae)
 
