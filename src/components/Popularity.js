@@ -10,7 +10,6 @@ const Stars = styled.View`
 `;
 
 function Popularity(props) {
-  console.log(props.stars);
   if (props.stars <= '1000') {
     return (
       <Stars>
