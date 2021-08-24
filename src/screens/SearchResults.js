@@ -12,6 +12,7 @@ import ListItem from '../components/ListItem';
 import PosterImage from '../components/PosterImage';
 import MovieTitle from '../components/MovieTitle';
 import SearchTitle from '../components/SearchTitle';
+import Popularity from '../components/Popularity';
 
 const SearchResults = props => {
   const navigation = props.navigation;
@@ -31,7 +32,7 @@ const SearchResults = props => {
     <ListItem onPress={() => navigation.navigate(item.page, {name: item.key})}>
       <PosterImage source={require('../imgs/poster.png')} />
       <MovieTitle>{item.title}</MovieTitle>
-      <Text style={{color: 'white'}}>X X X X X</Text>
+      <Popularity stars="2000" />
     </ListItem>
   );
 

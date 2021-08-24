@@ -16,6 +16,7 @@ import ListItem from '../components/ListItem';
 import PosterImage from '../components/PosterImage';
 import MovieTitle from '../components/MovieTitle';
 import HomeTitle from '../components/HomeTitle';
+import Popularity from '../components/Popularity';
 
 const MainScreen = props => {
   const navigation = props.navigation;
@@ -32,7 +33,7 @@ const MainScreen = props => {
     <ListItem onPress={() => navigation.navigate(item.page, {name: item.key})}>
       <PosterImage source={require('../imgs/poster.png')} />
       <MovieTitle>{item.title}</MovieTitle>
-      <Text>X X X X X</Text>
+      <Popularity stars="2000" />
     </ListItem>
   );
 
