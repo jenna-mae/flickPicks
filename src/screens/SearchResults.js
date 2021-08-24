@@ -6,7 +6,7 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-
+import axios from 'axios';
 import MainList from '../components/MainList';
 import ListItem from '../components/ListItem';
 import PosterImage from '../components/PosterImage';
@@ -16,31 +16,45 @@ import Popularity from '../components/Popularity';
 
 const SearchResults = props => {
   const navigation = props.navigation;
-  const ListData = [
-    {title: 'Croods', key: 'Details', page: 'Details'},
-    {title: 'Croods2', key: 'Details2', page: 'Details'},
-    {title: 'Croods3', key: 'Details3', page: 'Details'},
-    {title: 'Croods4', key: 'Details4', page: 'Details'},
-    {title: 'Croods5', key: 'Details5', page: 'Details'},
-    {title: 'Croods6', key: 'Details6', page: 'Details'},
-    {title: 'Croods7', key: 'Details7', page: 'Details'},
-    {title: 'Croods8', key: 'Details8', page: 'Details'},
-    {title: 'Croods9', key: 'Details9', page: 'Details'},
-  ];
+
+  const BASE_URL = 'https://api.themoviedb.org/3';
+  const api = axios.create({baseURL: BASE_URL});
+  const api_key = '5b1ff1ffc116295cb168d449b74b2dad';
+  const getMovies = api.get('movie/now_playing', {params: {api_key}});
+  const [data, setData] = React.useState([]);
+  const [genreTitle, setGenreTitle] = React.useState('Kids');
+
+  React.useEffect(() => {
+    getMovies.then(response => {
+      setData(response.data.results);
+    });
+  }, [getMovies]);
 
   const SearchScreenList = ({item}) => (
-    <ListItem onPress={() => navigation.navigate(item.page, {name: item.key})}>
-      <PosterImage source={require('../imgs/poster.png')} />
+    <ListItem
+      onPress={() =>
+        navigation.navigate('Details', {
+          poster: item.poster_path,
+          genre: [item.genre_ids],
+          name: item.title,
+          description: item.overview,
+        })
+      }>
+      <PosterImage
+        source={{
+          uri: `https://image.tmdb.org/t/p/w500${item.poster_path}`,
+        }}
+      />
       <MovieTitle>{item.title}</MovieTitle>
-      <Popularity stars="2000" />
+      <Popularity stars={item.popularity} />
     </ListItem>
   );
 
   return (
     // eslint-disable-next-line react-native/no-inline-styles
     <SafeAreaView style={{backgroundColor: '#1E032B'}}>
-      <SearchTitle>Search Results for "kids"</SearchTitle>
-      <MainList data={ListData} renderItem={SearchScreenList} numColumns={3} />
+      <SearchTitle>Search Results for "{genreTitle}"</SearchTitle>
+      <MainList data={data} renderItem={SearchScreenList} numColumns={3} />
     </SafeAreaView>
   );
 };
