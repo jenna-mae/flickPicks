@@ -33,7 +33,7 @@ const MainScreen = props => {
     <ListItem onPress={() => navigation.navigate(item.page, {name: item.key})}>
       <PosterImage source={require('../imgs/poster.png')} />
       <MovieTitle>{item.title}</MovieTitle>
-      <Popularity />
+      <Popularity stars="2000" />
     </ListItem>
   );
 

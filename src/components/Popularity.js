@@ -9,16 +9,59 @@ const Stars = styled.View`
   padding-top: 8px;
 `;
 
-function Popularity() {
-  return (
-    <Stars>
-      <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
-      <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
-      <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
-      <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
-      <FontAwesomeIcon icon={faStar} color={'grey'} size={14} />
-    </Stars>
-  );
+function Popularity(props) {
+  console.log(props.stars);
+  if (props.stars <= '1000') {
+    return (
+      <Stars>
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'grey'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'grey'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'grey'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'grey'} size={14} />
+      </Stars>
+    );
+  } else if (props.stars <= '2000') {
+    return (
+      <Stars>
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'grey'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'grey'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'grey'} size={14} />
+      </Stars>
+    );
+  } else if (props.stars <= '3000') {
+    return (
+      <Stars>
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'grey'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'grey'} size={14} />
+      </Stars>
+    );
+  } else if (props.stars <= '4000') {
+    return (
+      <Stars>
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'grey'} size={14} />
+      </Stars>
+    );
+  } else {
+    return (
+      <Stars>
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+        <FontAwesomeIcon icon={faStar} color={'yellow'} size={14} />
+      </Stars>
+    );
+  }
 }
 
 export default Popularity;
