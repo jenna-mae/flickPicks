@@ -5,9 +5,7 @@ import {useState} from 'react';
 import {SliderBox} from 'react-native-image-slider-box';
 
 const HeroContainer = styled.View`
-  position: relative;
   width: 100%;
-  height: 20%;
 `;
 
 const Title = styled.Text`
