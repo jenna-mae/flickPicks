@@ -50,7 +50,13 @@ const MainScreen = props => {
           Search Results
         </Button>
         <HomeTitle>Top Kids Picks:</HomeTitle>
-        <MainList data={ListData} renderItem={MainScreenList} numColumns={3} />
+        <MainList
+          data={ListData}
+          scrollEnabled="false"
+          renderItem={MainScreenList}
+          numColumns={3}
+          height={800}
+        />
       </ScrollView>
     </SafeAreaView>
   );
